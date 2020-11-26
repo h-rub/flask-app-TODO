@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="media-body">
+    <h2 style="text-align: center; margin-top: 1rem;">Add a task</h2>
+    <form action="/create-task" method="POST">
+      <div class="form-group">
+          <input type="text" name="title" placeholder="Title" class="form-control" autofocus>
+          <div style="margin-top: 0.2rem;"></div>
+          <input type="text" name="content" placeholder="Description" class="form-control" autofocus>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Save</button>
+  </form>
+  </div>
+  <div style="margin-top: 1rem;"></div>
+  <div class="media-body">
+    {% for task in tasks %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="task-metadata">
+              <a class="mr-2" href="#">{{ task.author }}</a>
+              <small class="text-muted">{{ task.date_posted }}</small>
+            </div>
+            {% if task.done %}
+            <span class="done">Completed ✅</span> 
+            <h2 class="task-title">{{ task.title }}</h2>
+            {% else %} 
+            <h2 class="done">{{ task.title }}</h2> 
+            {% endif %}
+            <p class="task-content">{{ task.content }}</p>
+            <a href="/done/{{task.id}}" class="btn btn-success btn-lg">Done</a>
+            <a href="{{url_for('delete', id=task.id)}}" class="btn btn-danger btn-lg">Delete</a>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
