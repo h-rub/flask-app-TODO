@@ -9,5 +9,3 @@ flask-login
 flask-sqlalchemy
 flask-bcrypt
 email_validator
-gunicorn
-python-decouple
