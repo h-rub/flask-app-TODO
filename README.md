@@ -2,6 +2,10 @@
 
 Create tasks and enjoy with this project made in Python
 
+<div style="text-align:center">
+<img src ="/screenshots/my-tasks.png"/>
+</div>
+
 ## ¿How to use?
 
 ### Step 1 - Download
