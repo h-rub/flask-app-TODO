@@ -11,18 +11,33 @@ Create tasks and enjoy with this project made in Python
 ### Step 1 - Download
 Clone this repositorie
 
+```bash
 git clone https://github.com/h-rub/flask-app-todo.git
+```
 
 ### Step 2 - Create db
 Open a terminal and type the next in the python interpreter
 
-<br>from togk import db
-<br>db.create_all()
-<br>exit()
+
+```bash
+from togk import db
+```
+
+```bash
+db.create_all()
+```
+
+```bash
+exit()
+```
 
 ### Step 3 - Run the server
 
+
+```bash
 python run.py
+```
+
 
 ### Step 4 - Enjoy
 
