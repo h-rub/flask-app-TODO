@@ -21,13 +21,7 @@ Open a terminal and type the next in the python interpreter
 
 ```bash
 from togk import db
-```
-
-```bash
 db.create_all()
-```
-
-```bash
 exit()
 ```
 
